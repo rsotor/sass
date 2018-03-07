@@ -1,0 +1,40 @@
+@import "compass/reset";
+@import "compass/utilities";
+@import "compass/css3";
+
+// Colores
+$negro: #181c21;
+$blanco: #e4e7be;
+$amarillo: #fec627;
+$naranja: #fcba2a;
+$rojo: #ff1932;
+$verde: #1fff57;
+
+$color-background : $negro;
+$color-brand   : $blanco;
+$color-error: $rojo;
+$color-error-lighten : lighten($color-error, 5%);
+$color-sucess : $verde;
+$color-sucess-lighten : lighten($color-sucess, 5%);
+$color-cta : $amarillo;
+$color-cta-lighten : lighten($color-cta, 5%);
+
+// Tamanos
+$texto-base: 10px;
+$padding-base: 10px;
+$border-radius-base: 0.25rem;
+
+$texto-base-tablet: 12px;
+$padding-base-tablet: 12px;
+$border-radius-base-tablet: 0.3rem;
+
+$texto-base-desktop: 16px;
+$padding-base-desktop: 16px;
+$border-radius-base-desktop: 0.5rem;
+
+
+//Variables Mixins
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1025px;
+$desktop-big: 1200px;

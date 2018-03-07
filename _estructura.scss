@@ -1,0 +1,53 @@
+#general {
+  background: $color-background;
+  width: 100%;
+  color: $color-brand;
+}
+
+section {
+  padding: 0 $padding-base;
+  position: relative;
+  width:100%;
+  max-width: $desktop-big;
+  margin: 0 auto;
+
+  @include tablet {
+    padding: 0 $padding-base-tablet;
+  }
+
+  @include desktop {
+    padding: 0 $padding-base-desktop;
+  }
+}
+
+article {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100%;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
+  padding:0;
+
+
+  &.flexColumn {
+    flex-direction: column;
+  }
+  &.flexcenter {
+    align-items: center;
+  }
+
+  &.flex-end {
+    justify-content: flex-end;
+  }
+
+  &.flex-start {
+    justify-content: flex-start;
+  }
+}

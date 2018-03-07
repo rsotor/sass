@@ -1,0 +1,57 @@
+#menu {
+  position: fixed;
+  top:0;
+  left: -200%;
+  width:100%;
+  height: 100%;
+  background: $color-background;
+  z-index: 999;
+  overflow: hidden;
+  padding: $padding-base;
+  @include transition(left .5s linear);
+
+  .closeMenu {
+    position: absolute;
+    top: $padding-base;
+    right: $padding-base;
+    padding: $padding-base;
+    z-index: 10;
+
+    span {
+      display: none;
+    }
+
+    i {
+      font-size: 1.7rem;
+    }
+  }
+
+  ul {
+    padding: $padding-base;
+    margin: 0;
+    width: 80%;
+    font-size: 1.7rem;
+    z-index: 5;
+
+    li {
+      padding: 0 0 $padding-base 0;
+      margin: 0;
+      list-style-type: none;
+    }
+  }
+
+  .switchLanguage {
+    text-align: right;
+    font-size: 1.4rem;
+  }
+
+  &.show {
+    left:0;
+    width: 100%;
+
+    //ul {
+    //  opacity: 1;
+    //}
+  }
+
+}

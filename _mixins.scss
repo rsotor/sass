@@ -1,0 +1,82 @@
+// Responsive
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+/* Corte a 768px */
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+/* Corte a 1024px */
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+/* Corte a 1200px */
+@mixin desktop-big {
+  @media (min-width: #{$desktop-big}) {
+    @content;
+  }
+}
+
+// Opacidad
+//@include opacity(0.8);
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Transitions
+//@include transition(color .3s ease, background .3s ease);
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// Transform
+//@include transform(translate3d(0px, 0px, 0px) scale(1));
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+    width:100%;
+  }
+}
+
+@mixin animation($keyframeName, $duration, $delay, $timingFunction, $counter) {
+  -webkit-animation-name: $keyframeName;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-delay: $delay;
+  -webkit-animation-timing-function: $timingFunction;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: $counter;
+  animation-name: $keyframeName;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-timing-function: $timingFunction;
+  animation-fill-mode: both;
+  animation-iteration-count: $counter;
+}

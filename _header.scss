@@ -1,0 +1,29 @@
+#headerPage {
+  position: -webkit-sticky;
+  position: sticky;
+  padding:$padding-base 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  top:0;
+  background: $color-background;
+  z-index: 100;
+
+  h1 {
+    padding:0;
+    width: 100%;
+  }
+
+  .showMenu {
+    padding: $padding-base;
+    span {
+      display: none
+    }
+
+    i {
+      font-size: 20px;
+    }
+  }
+
+}

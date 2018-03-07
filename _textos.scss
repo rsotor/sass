@@ -1,0 +1,106 @@
+// ---------------------- Genericos ----------------------
+
+body,
+html{
+  font-size: $texto-base;
+  line-height: normal;
+
+
+  @include tablet {
+    font-size: $texto-base-tablet;
+    line-height: normal;
+  }
+
+  @include desktop {
+    font-size: $texto-base-desktop;
+    line-height: normal;
+  }
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+// ---------------------- Titulares ----------------------
+
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  color: $naranja;
+  text-align: center;
+  padding: 0;
+  letter-spacing: -1vw;
+
+  span {
+    font-size: 9vw;
+    line-height: 9vw;
+
+    @include desktop-big {
+      font-size: 8vw;
+      line-height: 8vw;
+    }
+  }
+
+}
+
+h2 {
+  font-family: 'Roboto Mono', monospace;
+  color: $naranja;
+  padding: 0;
+  letter-spacing: -0.3vw;
+  font-size: 5vw;
+  line-height: 5vw;
+}
+
+h3 {
+  font-family: 'Roboto Mono', monospace;
+  color: $naranja;
+  line-height: normal;
+  padding: 0;
+  letter-spacing: -0.3vw;
+
+  span {
+    font-size: 3vw;
+    line-height: 3vw;
+  }
+}
+
+// ---------------------- Parrafos ----------------------
+
+p {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  padding-bottom: $padding-base;
+
+  @include tablet {
+    padding-bottom: $padding-base-tablet;
+  }
+
+  @include desktop {
+    padding-bottom: $padding-base-desktop;
+  }
+}
+
+// ---------------------- Listados ----------------------
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 1.7rem 20.5rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+
+  li {
+    padding: 0 0 0.5rem 1.4rem;
+    font-size: 1em;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: 0.6rem;
+      left: 0;
+      content: '-';
+      display: block;
+      line-height: 0.1em;
+    }
+  }
+}
